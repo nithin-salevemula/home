@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Researcher</title>
+  <meta name="description" content="Academic website template — publications, projects, teaching, CV" />
+  <!-- Tailwind Play CDN (good for quick prototypes). For production, build with Tailwind. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Small utility to constrain content width */
+    .container { max-width: 1100px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body class="bg-white text-slate-800 antialiased">
+  <!-- NAVBAR -->
+  <header class="border-b bg-white/60 backdrop-blur sticky top-0 z-30">
+    <div class="container px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-slate-200 overflow-hidden">
+          <!-- Replace with your headshot: <img src="/path/to/photo.jpg" alt="Your Name" /> -->
+          <svg class="w-full h-full" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="#e2e8f0"/></svg>
+        </div>
+        <div>
+          <a href="#home" class="text-lg font-semibold">Your Name</a>
+          <div class="text-sm text-slate-500">Assistant Professor / PhD Student — Area</div>
+        </div>
+      </div>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm">
+        <a href="#research" class="hover:underline">Research</a>
+        <a href="#publications" class="hover:underline">Publications</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#teaching" class="hover:underline">Teaching</a>
+        <a href="#talks" class="hover:underline">Talks</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+        <a href="/cv.pdf" class="ml-3 inline-block px-3 py-1 border rounded text-sm">Download CV</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menuBtn" aria-label="menu" class="p-2 rounded hover:bg-slate-100">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container px-6 py-10">
+    <!-- HERO / ABOUT -->
+    <section id="home" class="grid md:grid-cols-3 gap-8 items-center">
+      <div class="md:col-span-2">
+        <h1 class="text-3xl md:text-4xl font-bold mb-2">Your Name</h1>
+        <p class="text-slate-600 mb-4">Short bio — 1–2 lines. Example: I am a PhD student at IIT Madras working on distributed algorithms, incentive-compatible protocols, and cryptography.</p>
+        <div class="flex gap-3 flex-wrap">
+          <a href="#publications" class="px-4 py-2 bg-slate-800 text-white rounded">Publications</a>
+          <a href="#projects" class="px-4 py-2 border rounded">Projects</a>
+          <a href="/cv.pdf" class="px-4 py-2 border rounded">Download CV</a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div>
+            <h4 class="text-sm text-slate-500">Email</h4>
+            <div>your.email@domain.edu</div>
+          </div>
+          <div>
+            <h4 class="text-sm text-slate-500">Location</h4>
+            <div>Chennai, India</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <div class="w-44 h-44 rounded-2xl overflow-hidden shadow-lg bg-slate-100">
+          <!-- Replace with your photo -->
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&q=60" alt="Your Photo" class="w-full h-full object-cover" />
+        </div>
+        <div class="mt-4 text-sm text-slate-500 text-center">Position • Department<br/>Institution</div>
+      </div>
+    </section>
+
+    <!-- RESEARCH AREAS -->
+    <section id="research" class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Research</h2>
+      <p class="text-slate-600">Brief description of your research interests.</p>
+      <ul class="mt-4 grid md:grid-cols-3 gap-4">
+        <li class="p-4 border rounded">Distributed algorithms</li>
+        <li class="p-4 border rounded">Cryptography & Secure Computation</li>
+        <li class="p-4 border rounded">Game theory & Mechanism Design</li>
+      </ul>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Selected Publications</h2>
+      <p class="text-sm text-slate-500 mb-4">(Replace these with your actual publications or provide a BibTeX file; the template supports a short list.)</p>
+
+      <div id="pubList" class="space-y-4">
+        <!-- Example publications. Replace with real entries or hook a BibTeX parser. -->
+        <article class="p-4 border rounded">
+          <div class="font-semibold">N. Surname, A. Coauthor — Title of Paper</div>
+          <div class="text-sm text-slate-500">Conference, Year • <a href="#" class="underline">PDF</a></div>
+          <p class="mt-2 text-sm text-slate-700">One-line description of the contribution.</p>
+        </article>
+
+        <article class="p-4 border rounded">
+          <div class="font-semibold">N. Surname — Another Paper</div>
+          <div class="text-sm text-slate-500">Journal, Year • <a href="#" class="underline">PDF</a></div>
+          <p class="mt-2 text-sm text-slate-700">One-line description of the contribution.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="p-4 border rounded">
+          <div class="font-semibold">Project Title</div>
+          <div class="text-sm text-slate-500">Tools • Role</div>
+          <p class="mt-2 text-sm">Short description. Add a link to GitHub or demo.</p>
+        </div>
+
+        <div class="p-4 border rounded">
+          <div class="font-semibold">Project Title 2</div>
+          <div class="text-sm text-slate-500">Tools • Role</div>
+          <p class="mt-2 text-sm">Short description.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching" class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Teaching</h2>
+      <div class="space-y-3">
+        <div class="p-3 border rounded">
+          <div class="font-semibold">Course Title — Semester Year</div>
+          <div class="text-sm text-slate-500">Institution — Role (Instructor / TA)</div>
+          <p class="mt-1 text-sm">Brief course description and link to slides/assignments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TALKS -->
+    <section id="talks" class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4">Talks & Workshops</h2>
+      <ul class="list-disc pl-5 text-sm text-slate-700">
+        <li>Talk title — Event, Year (link)</li>
+        <li>Invited talk — Event, Year</li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mt-12 mb-20">
+      <h2 class="text-2xl font-semibold mb-4">Contact</h2>
+      <p class="text-sm text-slate-600">Email: <a href="mailto:your.email@domain.edu" class="underline">your.email@domain.edu</a></p>
+      <div class="mt-4 grid md:grid-cols-3 gap-4">
+        <div class="p-4 border rounded">
+          <div class="font-semibold">Office</div>
+          <div class="text-sm text-slate-500">Building, Department</div>
+        </div>
+        <div class="p-4 border rounded">
+          <div class="font-semibold">GitHub</div>
+          <div class="text-sm text-slate-500"><a href="#" class="underline">github.com/username</a></div>
+        </div>
+        <div class="p-4 border rounded">
+          <div class="font-semibold">Google Scholar</div>
+          <div class="text-sm text-slate-500"><a href="#" class="underline">scholar.google.com/your</a></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t py-6 text-center text-sm text-slate-500">
+    © <span id="year"></span> Your Name — Built with a simple template.
+  </footer>
+
+  <script>
+    // Small interactivity: mobile menu and year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menuBtn');
+    if (menuBtn) {
+      menuBtn.addEventListener('click', () => {
+        const nav = document.querySelector('header nav');
+        if (!nav) return;
+        nav.classList.toggle('hidden');
+      });
+    }
+
+    /*
+      HOW TO CUSTOMIZE:
+      - Replace "Your Name", short bio, email, and image with your details.
+      - Replace sample publications with real entries; you can either hardcode
+        HTML or plug a small BibTeX-to-JSON parser and render dynamically.
+      - Replace /cv.pdf with your CV file path and upload it to the same folder.
+      - For production deployment: build with Tailwind (vite/postcss), or
+        keep this simple version and host on GitHub Pages by pushing this file.
+    */
+  </script>
+</body>
+</html>
+
